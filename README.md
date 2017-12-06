@@ -1,5 +1,3 @@
-# HTML-Less-Gulp-Scaffold 
-Starter kit for HTML with LESS,CSS,with GULP (auto reload) for small personal projects.
 
 # Dependencies 
  1. Browser-sync

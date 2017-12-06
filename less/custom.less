@@ -1,0 +1,316 @@
+.checkmark{
+  display:inline-block;
+  margin-right: 10px;
+  
+  &:after{
+    /*Add another block-level blank space*/
+    content: '';
+    display: block;
+ 
+    /*Make it a small rectangle so the border will create an L-shape*/
+    width: 5px;
+    height: 10px;
+ 
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid @green;
+    border-width: 0 2px 2px 0;
+ 
+    /*Rotate the L 45 degrees to turn it into a checkmark*/
+    transform: rotate(45deg);
+  }
+}
+
+// Styles for switch
+.switch {
+  position: relative;
+  top: 4px;
+  left: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+
+  input {
+    display:none;
+  }
+}
+
+.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.round:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: -4px;
+  bottom: -1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+input:checked + .round {
+  background-color: @light-black;
+}
+
+input:focus + .round {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:focus + .round:before {
+  border-radius: 100px;
+  border: solid 4px rgba(255, 216, 64, 0.6);
+  bottom: -4px;
+}
+
+input:checked + .round:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+// End of styles for switch
+
+// Styles for Menu
+.menu {
+  min-width: 320px;
+  min-height: 100%;
+  background-color: @light-black;
+  font-family: Roboto;
+
+  &__header {
+    padding: 26px 19px 0;
+  }
+
+  &__hamburger {
+    position: relative;
+    padding-left: 1.25em;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      width: 1em;
+      height: 0.15em;
+      background: @white;
+      box-shadow: 
+        0 0.25em 0 0 @white,
+        0 0.5em 0 0 @white;
+    }
+  }
+
+  &__logo {
+    margin-left: 19px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 0.5px;
+    color: @white;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__block {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 11px;
+
+    &-title {
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 2;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    &-button {
+      width: 128px;
+      height: 32px;
+      margin: 21px 16px 3px;
+      font-size: 14px;
+      line-height: 1.43;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.9);
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten(rgba(255, 255, 255, 0.95), 20%);
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+
+      .clearfix();
+      padding: 12px 16px;
+      transition: all .5s ease;
+
+      &:hover,
+      &--active {
+        background-color: @yellow;
+        cursor: pointer;
+      }
+    }
+
+    &-image {
+      width: 48px;
+      height: 48px;
+      float: left;
+      padding-right: 16px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.71;
+      color: @white;
+    }
+  }
+}
+// End Styles for menu
+
+.content-wrap {
+  display: flex;
+  min-width: 1156px;
+}
+
+.content {
+  width: 1156px;
+  height: 100%;
+  background-image: linear-gradient(31deg, @light-grey, @grey);
+}
+
+// Styles for Players sectioт
+.players {
+  margin: 32px 32px 64px 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.05);
+  font-family: Roboto;
+
+  &-details {
+    height: 48px;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .clearfix();
+
+    &__item {
+      display: block;
+      float: left;
+      width: 20%;
+    }
+
+    &__link {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 3.43;
+      color: @light-black;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: box-shadow .5s ease-in-out;
+
+      &:hover,
+      &--active {
+        box-shadow: inset 0 -2px 0 @black;
+      }
+    }
+  }
+
+  &__order {
+    padding: 28px 48px 27px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__list {
+    padding-top: 32px;
+    .clearfix();
+
+    &-info {
+      width: 25%;
+      float: left;
+      padding-left: 26px;
+      font-size: 14px;
+      line-height: 1.71;
+      color: @green;
+    }
+  }
+
+  &__photos {
+    display: flex;
+    flex-wrap: wrap;
+    .clearfix();
+
+    &-item {
+      width: 33%;
+      margin-bottom: 28px;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.9);
+
+      @media (min-width: 1396px) {
+        width: 25%;
+      }
+    }
+
+    &-link {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 170px;
+      overflow: hidden;
+
+      &--empty {
+        line-height: 164px;
+        text-decoration: none;
+        color: rgba(0, 0 , 0, .6);
+        background-color: rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &-image {
+      max-width: 164px;
+      width: 100%;
+      margin: 0 auto 5px;
+      border: solid 1px rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+
+            &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.8s;
+        opacity: 1;
+        background-color: @black;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+// End styles for players section
+  

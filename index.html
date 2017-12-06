@@ -2,10 +2,246 @@
 <html>
 <head>
 	<title>Home Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<ul>
-	<li> <a href="/project-details-page.html"> Project Details </a> </li>
-</ul>
+<div class="content-wrap">
+    <div class="menu">
+      <div class="menu__block">
+        <div class="menu__header">
+          <a class="menu__hamburger"></a>
+          <a class="menu__logo" href="#">Omnigon</a>
+        </div>
+        <button class="menu__block-button" type="buton">New vote</button>
+      </div>
+
+      <div class="menu__block">
+        <p class="menu__block-title">Draft</p>
+        <ul class="menu__block-list">
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/footballer.png" alt="">
+              <p class="menu__block-text">New vote</p>
+            </a>   
+          </li>
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/footballer.png" alt="Serie A Footballet of the Year">
+              <p class="menu__block-text">Serie A Footballet of the Year</p>
+            </a>   
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__block">
+        <p class="menu__block-title">Active</p>
+        <ul class="menu__block-list">
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/jaguar.png" alt="Unleash a Jaguar">
+              <p class="menu__block-text">Unleash a Jaguar</p>
+            </a>   
+          </li>
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/wimbeldon.png" alt="Choose best Wimbeldon player and win tickets to the finals">
+              <p class="menu__block-text">Choose best Wimbeldon player and win tickets to the finals</p>
+            </a>   
+          </li>
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/2015-music-moments.png" alt="2015 Music Moments">
+              <p class="menu__block-text">2015 Music Moments</p>
+            </a>   
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__block">
+        <p class="menu__block-title">Closed</p>
+        <ul class="menu__block-list">
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/all-time-greats.png" alt="All time greats">
+              <p class="menu__block-text">All time greats</p>
+            </a>   
+          </li>
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/insane-dunks.png" alt="Insane dunks">
+              <p class="menu__block-text">Insane dunks</p>
+            </a>   
+          </li>
+          <li class="menu__block-item">
+            <a class="menu__block-link">
+              <img class="menu__block-image" src="images/2014-music-moments.png" alt="014 Music Moments">
+              <p class="menu__block-text">2014 Music Moments</p>
+            </a>   
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <section class="content">
+      <div class="players">
+        <ul class="players-details">
+          <li class="players-details__item"><a class="players-details__link" href="#">Detail</a></li>
+          <li class="players-details__item"><a class="players-details__link players-details__link--active" href="#">Content</a></li>
+          <li class="players-details__item"><a class="players-details__link" href="#">Ads</a></li>
+          <li class="players-details__item"><a class="players-details__link" href="#">Data capture</a></li>
+          <li class="players-details__item"><a class="players-details__link" href="#">Look and feel</a></li>
+        </ul>
+
+        <div class="players__order">
+          <p>Present in random order
+            <label class="switch">
+              <input type="checkbox">
+              <span class="round"></span>
+            </label>
+          </p>
+        </div>
+
+        <div class="players__list">
+          <div class="players__list-info">
+            <i class="checkmark"></i>Embed at least 2 players*
+          </div>
+          <ul class="players__photos">
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/derozan.png" alt="DeMar DeRozan"></a>
+                <figcaption>
+                  DeMar DeRozan
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/curry.png" alt="Stephen Curry"></a>
+                <figcaption>
+                  Stephen Curry
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/durant.png" alt="Kevin Durant"></a>
+                <figcaption>
+                  Kevin Durant
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/harden.png" alt="James Harden"></a>
+                <figcaption>
+                  James Harden
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/jordan.png" alt="DeAndre Jordan"></a>
+                <figcaption>
+                  DeAndre Jordan
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/westbrook.png" alt="Russell Westbrook"></a>
+                <figcaption>
+                  Russell Westbrook
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/parsons.png" alt="Chandler Parsons"></a>
+                <figcaption>
+                  Chandler Parsons
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/farried.png" alt="Kenneth Farried"></a>
+                <figcaption>
+                  Kenneth Farried
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/hayward.png" alt="Gordon Hayward"></a>
+                <figcaption>
+                  Gordon Hayward
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/conley.png" alt="Mike Conley"></a>
+                <figcaption>
+                  Mike Conley
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/howard.png" alt="Dwight Howard"></a>
+                <figcaption>
+                  Dwight Howard
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link" href="#"><img class="players__photos-image" src="images/placeholder.png" alt="Trey Burke"></a>
+                <figcaption>
+                  Trey Burke
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link players__photos-link--empty" href="#">+</a>
+                <figcaption>
+                  
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link players__photos-link--empty" href="#">+</a>
+                <figcaption>
+                  
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link players__photos-link--empty" href="#">+</a>
+                <figcaption>
+                  
+                </figcaption>
+              </figure>
+            </li>
+            <li class="players__photos-item">
+              <figure>
+                <a class="players__photos-link players__photos-link--empty" href="#">+</a>
+                <figcaption>
+                  
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+</div>
 </body>
 </html>

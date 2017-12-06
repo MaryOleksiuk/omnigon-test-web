@@ -14,7 +14,7 @@ var bs = require('browser-sync').create(); // create a browser sync instance.
 //Less Task
 gulp.task('less', function(){
 	//less folder
-	gulp.src(['less/*.less'])
+	gulp.src(['less/main.less'])
 	.pipe(less())
 	.pipe(gulp.dest('css')) ;
 	console.log("Running Less Task");
@@ -28,8 +28,6 @@ gulp.task('browser-sync', function() {
         }
     });
 });
-
-
 
 //when ever a change happens, run the task less
 gulp.task('watch',['browser-sync'], function() {

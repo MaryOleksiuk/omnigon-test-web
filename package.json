@@ -5,15 +5,16 @@
   "main": "gulp.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-util": "^3.0.8"
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.6",
+    "gulp-less": "^3.3.2",
     "gulp-util": "^3.0.8"
   },
   "scripts": {
     "test": "gulp"
   },
-  "author": "hasi",
+  "author": "Mariia",
   "license": "ISC"
 }
