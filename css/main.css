@@ -277,11 +277,21 @@ input:checked + .round:before {
   background-color: #ffd840;
   cursor: pointer;
 }
+.menu__block-link:hover .menu__block-image--empty,
+.menu__block-link--active .menu__block-image--empty {
+  background-color: #ffeda6;
+}
 .menu__block-image {
   width: 48px;
   height: 48px;
   float: left;
-  padding-right: 16px;
+  margin-right: 16px;
+}
+.menu__block-image--empty {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 .menu__block-text {
   font-size: 14px;
