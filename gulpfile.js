@@ -10,6 +10,9 @@ var less= require('gulp-less');
 //npm browser-sync 
 var bs = require('browser-sync').create(); // create a browser sync instance.
 
+// clean-css
+var cleanCSS = require('gulp-clean-css');
+
 
 //Less Task
 gulp.task('less', function(){
@@ -18,6 +21,13 @@ gulp.task('less', function(){
 	.pipe(less())
 	.pipe(gulp.dest('css')) ;
 	console.log("Running Less Task");
+});
+
+// Minify CSS
+gulp.task('minify-css', () => {
+  return gulp.src('css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
 });
 
 //Browser Sync Task
@@ -37,4 +47,4 @@ gulp.task('watch',['browser-sync'], function() {
 
 
 // create a default task and just log a message
-gulp.task('default',['watch','less']);
+gulp.task('default',['watch','less', 'minify-css']);

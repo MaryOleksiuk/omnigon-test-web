@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.6",
+    "gulp-clean-css": "^3.9.0",
     "gulp-less": "^3.3.2",
     "gulp-util": "^3.0.8"
   },
