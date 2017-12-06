@@ -151,7 +151,7 @@ input:checked + .round:before {
       border: none;
 
       &:hover {
-        background-color: lighten(rgba(255, 255, 255, 0.95), 20%);
+        background-color: rgba(255, 255, 255, 0.75);
       }
     }
 
@@ -177,7 +177,6 @@ input:checked + .round:before {
     &-image {
       width: 48px;
       height: 48px;
-      float: left;
       margin-right: 16px;
 
       &--empty {
@@ -208,7 +207,7 @@ input:checked + .round:before {
   background-image: linear-gradient(31deg, @light-grey, @grey);
 }
 
-// Styles for Players sectioт
+// Styles for Players section
 .players {
   margin: 32px 32px 64px 32px;
   border-radius: 8px;
@@ -287,10 +286,12 @@ input:checked + .round:before {
     }
 
     &-link {
+      position: relative;
       display: block;
       margin: 0 auto;
       border-radius: 50%;
-      width: 170px;
+      width: 164px;
+      height: 164px;
       overflow: hidden;
 
       &--empty {
@@ -300,27 +301,34 @@ input:checked + .round:before {
         background-color: rgba(0, 0, 0, 0.05);
         box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
       }
-    }
 
-    &-image {
-      max-width: 164px;
-      width: 100%;
-      margin: 0 auto 5px;
-      border: solid 1px rgba(0, 0, 0, 0.05);
-      border-radius: 50%;
-
-            &::before {
-        content: "";
+      &::after {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 100%;
-        transition: all 0.8s;
-        opacity: 1;
+        z-index: 1;
         background-color: @black;
-        background-size: 100% 100%;
+        opacity: 0;
+        transition: opacity .5s ease;
       }
+
+      &:hover {
+        &::after {
+          opacity: 0.25;
+        }
+      }
+    }
+
+    &-image {
+      width: 164px;
+      margin: 0 auto 5px;
+      border: solid 1px rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      box-sizing: border-box;
     }
   }
 }
